@@ -2,26 +2,28 @@ const image = document.getElementById("image");
 const caption = document.getElementById("caption");
 
 function describeRoom(s) {
+    let string;
     switch (s) {
         case ("awesome"):
-            console.log("You're awesome1!11!");
+            string = "You're awesome1!11!";
             break;
         case ("lame"):
-            console.log("You suck!");
+            string = "You suck!";
             break;
         default:
-            console.log("How plain...");
+            string = "How plain...";
             break;
     }
+
+    return string;
 }
 
 function displayNode(node) {
-    image.src = node.image;
-    caption.innerHTML = node.text;
-    choices.
+    image.src = storyNodes[node].image;
+    caption.innerHTML = storyNodes[node].text;
 }
 
-let room1 = {
+let exampleNode = {
     image : "images\\pexels-ekrulila-2810775.jpg",
     text : ";akdf;akdsjf",
     choices : ["ur moma", "ur dada"]
@@ -45,4 +47,7 @@ let room4 = {
     choices : ["ur auntie", "ur uncle"]
 }
 
-let storyNodes = [room1, room2, room3, room4];
+let storyNodes = [exampleNode, room2, room3, room4];
+
+describeRoom("awesome");
+displayNode(0);

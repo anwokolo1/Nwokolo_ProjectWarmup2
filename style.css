@@ -1,0 +1,9 @@
+body {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    max-height: 1000px;
+    line-height: 3px;
+    font-family:'Gill Sans';
+    font-size: 13px;
+}
